@@ -1,0 +1,8 @@
+// Remove author and author_email fields as they are replaced with the new author_id relation
+TCEFORM.tx_news_domain_model_news {
+	author.disabled = 1
+	author_email.disabled = 1
+}
+
+// Add RTE transformation to news bodytext field in order to work
+RTE.config.tx_news_domain_model_news.bodytext.proc.overruleMode = tx_newsblog_rte,ts_css

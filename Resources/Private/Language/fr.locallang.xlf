@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="fr" datatype="plaintext" original="messages" product-name="news_blog">
+		<header/>
+		<body>
+            <trans-unit id="model.backend_user.property.profile_pid">
+                <source>Page de profil</source>
+            </trans-unit>
+            <trans-unit id="model.backend_user.property.abstract">
+                <source>Résumé</source>
+            </trans-unit>
+            <trans-unit id="model.news.property.author_id">
+                <source>Auteur</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>
