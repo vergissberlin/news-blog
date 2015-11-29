@@ -24,4 +24,4 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Domain/Repository/AbstractDemandedRe
         = 'NIMIUS\\NewsBlog\\Hook\\NewsRepositoryHook->modify';
 
 // Register custom RTE transformation class.
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_parsehtml_proc.php']['transformation']['tx_newsblog_rte'] = '\\NIMIUS\\NewsBlog\\Service\\RteTransformationService';
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_parsehtml_proc.php']['transformation']['tx_newsblog_rte'] = 'NIMIUS\\NewsBlog\\Service\\RteTransformationService';
