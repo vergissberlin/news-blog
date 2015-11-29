@@ -4,13 +4,13 @@
 		<header/>
 		<body>
             <trans-unit id="model.backend_user.property.profile_pid">
-                <source>Profilo</source>
+                <target>Profilo</target>
             </trans-unit>
             <trans-unit id="model.backend_user.property.abstract">
-                <source>Astratto</source>
+                <target>Astratto</target>
             </trans-unit>
             <trans-unit id="model.news.property.author_id">
-                <source>Autore</source>
+                <target>Autore</target>
             </trans-unit>
 		</body>
 	</file>
