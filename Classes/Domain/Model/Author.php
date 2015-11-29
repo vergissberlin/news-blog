@@ -26,9 +26,20 @@ class Author extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser {
 	protected $profilePid;
 
 	/**
-	 * @var string
+	 * @var string Raw abstract text
 	 */
 	protected $abstract;
+
+    /**
+     * @var \NIMIUS\NewsBlog\Domain\Model\TtContent Relation to abstract text
+     * @lazy
+     */
+	protected $abstractContent;
+
+	/**
+	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference Avatar image from core
+	 */
+	protected $avatar;
 
 
 	/**
@@ -43,5 +54,19 @@ class Author extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser {
 	 */
 	public function getAbstract() {
 		return $this->abstract;
+	}
+
+	/**
+	 * @return integer
+	 */
+	public function getAbstractContent() {
+		return $this->abstractContent;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+	 */
+	public function getAvatar() {
+		return $this->avatar;
 	}
 }

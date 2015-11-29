@@ -12,6 +12,10 @@
             <trans-unit id="model.news.property.author_id">
                 <source>Author</source>
             </trans-unit>
+
+			<trans-unit id="extconf.authors.abstract.records">
+				<source>Use tt_content for abstract</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

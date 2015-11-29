@@ -20,13 +20,21 @@ Abstract for backend users
 --------------------------
 This extension allows to add a short abstract about the author to each backend user record which is accessible through e.g. ``{news.authorRecord.abstract}``.
 
+If you set "abstract relations" in the extension manager, you'll be able to select a tt_content record as abstract,
+which is translatable and therefore suggested for multi-language setups. Access the related tt_content record with
+``{news.authorRecord.abstractContent}``.
+
+We also added support for the avatar-field which is available in TYPO3 v7. Use the file reference from the authorRecord
+to display the user's avatar image right next to the abstract; ``<f:image src="{newsItem.authorRecord.avatar.uid}" treatIdAsReference="1" />``
+
 Automatic assignmend of current backend user
 --------------------------------------------
 If you create or edit a record, the backend user you're currently logged in as will be assigned to the news record as author automatically.
 
 Filter articles by author
 -------------------------
-Although only available through TypoScript, you can utilize ``plugin.tx_news.settings.authors`` to filter records by author(s). It takes a comma-separated list of backend user id's to filter records.
+Although only available through TypoScript, you can utilize ``plugin.tx_news.settings.authors`` to filter records by author(s). It takes a comma-separated list of backend user id's to filter records. This way, you can set up author pages with a list of their
+articles.
 
 RTE transformation service to support code formatting
 -----------------------------------------------------

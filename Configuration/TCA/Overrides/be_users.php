@@ -12,12 +12,11 @@
  * The TYPO3 project - inspiring people to share!
  */
 
-use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 if (!defined('TYPO3_MODE')) {
 	die('Access denied.');
 }
 
+$config = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['news_blog']);
 $l = 'LLL:EXT:news_blog/Resources/Private/Language/locallang.xlf:model.backend_user.';
 $columns = array(
 	'profile_pid' => array(
@@ -45,8 +44,30 @@ $columns = array(
 			'rows' => 5,
 		),
 	),
+	'abstract_content' => array(
+		'label' => $l . 'property.abstract',
+		'config' => array(
+			'type' => 'group',
+			'internal_type' => 'db',
+			'foreign_table' => 'tt_content',
+			'allowed' => 'tt_content',
+			'size' => 1,
+			'minitems' => 0,
+			'maxitems' => 1,
+			'wizards' => array(
+				'suggest' => array(
+					'type' => 'suggest'
+				),
+			),
+		)
+	)
 );
 
 // Add new TCA fields to be_users.
-ExtensionManagementUtility::addTCAcolumns('be_users', $columns);
-ExtensionManagementUtility::addToAllTCAtypes('be_users', 'profile_pid, abstract', '', '');
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('be_users', $columns);
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('be_users', 'profile_pid', '', '');
+if ((bool)$config['abstractRecords']) {
+	TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('be_users', 'abstract_content', '', '');
+} else {
+	TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('be_users', 'abstract', '', '');
+}

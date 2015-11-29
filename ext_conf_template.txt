@@ -1,0 +1,2 @@
+# cat=authors/abstract; type=boolean; label=LLL:EXT:news_blog/Resources/Private/Language/locallang.xlf:extconf.authors.abstract.records
+abstractRecords = 0
