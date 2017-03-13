@@ -1,7 +1,7 @@
 <?php
 namespace NIMIUS\NewsBlog\Domain\Model;
 
-/**
+/*
  * This file is part of the TYPO3 CMS project.
  *
  * It is free software; you can redistribute it and/or modify it under
@@ -19,5 +19,6 @@ namespace NIMIUS\NewsBlog\Domain\Model;
  *
  * Extending the one from ext:news for the sake of simplicity.
  */
-class TtContent extends \GeorgRinger\News\Domain\Model\TtContent {
+class TtContent extends \GeorgRinger\News\Domain\Model\TtContent
+{
 }

@@ -1,7 +1,7 @@
 <?php
 namespace NIMIUS\NewsBlog\Domain\Model;
 
-/**
+/*
  * This file is part of the TYPO3 CMS project.
  *
  * It is free software; you can redistribute it and/or modify it under
@@ -17,17 +17,18 @@ namespace NIMIUS\NewsBlog\Domain\Model;
 /**
  * News model.
  */
-class News extends \GeorgRinger\News\Domain\Model\News {
-	/**
-	 * @var \NIMIUS\NewsBlog\Domain\Model\Author
-	 */
-	protected $authorId;
+class News extends \GeorgRinger\News\Domain\Model\News
+{
+    /**
+     * @var \NIMIUS\NewsBlog\Domain\Model\Author
+     */
+    protected $authorId;
 
-
-	/**
-	 * @return \NIMIUS\NewsBlog\Domain\Model\Author
-	 */
-	public function getAuthorRecord() {
-		return $this->authorId;
-	}
+    /**
+     * @return \NIMIUS\NewsBlog\Domain\Model\Author
+     */
+    public function getAuthorRecord()
+    {
+        return $this->authorId;
+    }
 }
