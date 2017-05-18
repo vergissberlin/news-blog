@@ -14,7 +14,9 @@ namespace NIMIUS\NewsBlog\Utility;
  * The TYPO3 project - inspiring people to share!
  */
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use TYPO3\CMS\Extbase\Object\ObjectManager;
 
 /**
  * Utility class to get configurations.
@@ -66,7 +68,8 @@ class ConfigurationUtility
             $extKey = self::$extKey;
         }
         $signature = 'tx_' . $extKey . '.';
-        $configurationManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Configuration\\ConfigurationManager');
+        $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        $configurationManager = $objectManager->get(ConfigurationManager::class);
         $configuration = $configurationManager->getConfiguration(ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
         if (is_array($configuration['plugin.'][$signature]['settings.'])) {
             return $configuration['plugin.'][$signature]['settings.'];
