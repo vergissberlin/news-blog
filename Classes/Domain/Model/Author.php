@@ -51,6 +51,14 @@ class Author extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser
     }
 
     /**
+     * @param int $profilePid
+     */
+    public function setProfilePid($profilePid)
+    {
+        $this->profilePid = $profilePid;
+    }
+
+    /**
      * @return string
      */
     public function getAbstract()
@@ -59,11 +67,27 @@ class Author extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser
     }
 
     /**
-     * @return int
+     * @param string $abstract
+     */
+    public function setAbstract($abstract)
+    {
+        $this->abstract = $abstract;
+    }
+
+    /**
+     * @return \NIMIUS\NewsBlog\Domain\Model\TtContent
      */
     public function getAbstractContent()
     {
         return $this->abstractContent;
+    }
+
+    /**
+     * @param \NIMIUS\NewsBlog\Domain\Model\TtContent $abstractContent
+     */
+    public function setAbstractContent($abstractContent)
+    {
+        $this->abstractContent = $abstractContent;
     }
 
     /**
@@ -72,5 +96,13 @@ class Author extends \TYPO3\CMS\Extbase\Domain\Model\BackendUser
     public function getAvatar()
     {
         return $this->avatar;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $avatar
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
     }
 }

@@ -31,4 +31,12 @@ class News extends \GeorgRinger\News\Domain\Model\News
     {
         return $this->authorId;
     }
+
+    /**
+     * @param \NIMIUS\NewsBlog\Domain\Model\Author $authorRecord
+     */
+    public function setAuthorRecord($authorRecord)
+    {
+        $this->authorId = $authorRecord;
+    }
 }
