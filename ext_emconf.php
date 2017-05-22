@@ -23,7 +23,7 @@ $EM_CONF[$_EXTKEY] =  [
     'constraints' => [
         'depends' => [
             'typo3' => '6.2.0-7.6.99',
-            'news' => '3.2.0-4.9.99'
+            'news' => '3.2.0-6.9.99'
         ],
     ],
 ];
