@@ -35,10 +35,9 @@ class NewsRepositoryHook
      * Appends constraints to the news query based on available custom settings.
      *
      * @param array &$params An array with all required objects in it
-     * @param NewsRepository $newsRepository The repository instance
      * @return void
      */
-    public function modify(array &$params, NewsRepository $newsRepository)
+    public function modify(array &$params)
     {
         $this->getSettings();
 
