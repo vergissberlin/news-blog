@@ -21,10 +21,6 @@ cache:
   directories:
     - "$HOME/.composer/cache"
 
-notifications:
-  slack:
-    secure: DKrjVUHwhpXcOq98TW7oBungpw7ivuTlR3aqwdIzwroSYOVWv27TDMS1boi14+R+75h+IMlExuwhQOfUplW5Eroy8k6wZ5ti+p90b1Ae2/LhkFgsjFDz5mbSNuOOB6DQw/TGFdumQGy7XwREaffUXC61kMN/WDpp4U+pRV4IkTRU8hQn0LkIfafvxXnPnrNHHIeckFLwrUtmlm/Fyp6vbPgy4DwSoSzPrAhyVeE7T+WzOG6SeEVAPMHsGyPdfKYCQCXfI8ZEIhRb+WhzSfLWAdlb7Hcj6TKI2wpsHhsqPEe6QMyJpSDxz7IA8So1YOHL48yWMJj/DH2sZ9gNcZxulVIJPPoC8TCwHtYVZMYJ1zvMOs1SY5qcJ5xTLC1WUY7e5oOfwmUqmJsmWeV0blqyETdcC278lTB6cCMgl0pa1Yjd5SPmuKIjyYj9RjtmEX1CqtXr7Bnf4oFD5iEIXjN3XXIgvKuF6Ep/sMTiDhi99jxzPE1KKipmGC2Br7QOHhxjaQJ6Rc0Jb9oSZikgMUBM7cOBAFP5uHHWS6Bnxc77YQZZpmBJ2ot4O4pzLg19X3TrGNiC+6mSGJVlT+NjLbNXt2zbbYjBhi10d9s9VJrywGfoPkN7MEkAiazFIpjItrCb9qA6iq4N1joFtWbZKEb3eboLpPm/RCXXenKzDHGKXgU=
-
 before_install:
   - phpenv config-rm xdebug.ini
   - composer self-update

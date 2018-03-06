@@ -14,7 +14,7 @@
 
 $EM_CONF[$_EXTKEY] =  [
     'title' => 'News blog features',
-    'description' => 'Extends tx_news with blog-like features',
+    'description' => 'Extends tx_news with blog-like features (fork by netresearch)',
     'category' => 'fe',
     'version' => '0.3.0',
     'state' => 'beta',
